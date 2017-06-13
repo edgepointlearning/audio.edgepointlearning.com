@@ -38,6 +38,10 @@ $(document).ready(function(){
 				mp3: 'audio/edmondson.mp3'
 			},
 			{
+				title: 'Larisa',
+				mp3: 'audio/larisa.mp3'
+			},
+			{
 				title: 'Mark',
 				mp3: 'audio/mark.mp3'
 			},
