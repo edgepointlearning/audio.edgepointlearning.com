@@ -61,6 +61,57 @@ body {
   content: "D";
 }
 
+.progress-container {
+  width: 100%;
+  position: relative;
+  height: 20px;
+}
+
+progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #ececec;
+}
+
+progress#song-played-progress {
+  z-index: 20;
+  background: transparent;
+}
+
+progress#song-played-progress::-webkit-progress-value {
+  background: #186dd2;
+}
+
+progress#song-played-progress::-moz-progress-bar {
+  background: #186dd2;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 5px;
+  background-color: #ececec;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 5px;
+  background: #cacaca;
+}
+
+progress::-moz-progress-bar {
+  border-radius: 5px;
+  background: #cacaca;
+}
+
+progress#song-buffered-progress {
+  z-index: 10;
+}
+
+progress#song-played-progress::-webkit-progress-bar {
+  background-color: transparent;
+}
 
 /* PLAYLIST */
 table {
