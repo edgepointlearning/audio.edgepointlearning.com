@@ -1,3 +1,6 @@
+---
+# this header tells jekyll to process this file
+---
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -11,16 +14,14 @@
 </head>
 
 <body>
-
   <div id="container">
-
     <p><img src="images/epl-horizontal-combination-mark.svg" alt="EdgePoint Learning"></p>
 
     <div class="flex player">
       <div class="half">
         <small>Now Playing:</small>
         <br>
-        <span class="title" amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+        <span amplitude-song-info="artist" amplitude-main-song-info="true" class="title"></span>
         <br>
         <span amplitude-song-info="album" amplitude-main-song-info="true">
       </div>
@@ -47,170 +48,37 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Adam Lofbomm</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="0"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="1"></a></td>
-        </tr>
-        <tr>
-          <td>Arielle DeLisle</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="2"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="3"></a></td>
-        </tr>
-        <tr>
-          <td>Bill DeBusk</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="4"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="5"></a></td>
-        </tr>
-        <tr>
-          <td>Eric Bodrero</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="6"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="7"></a></td>
-        </tr>
-        <tr>
-          <td>Eric Hartmann</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="8"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="9"></a></td>
-        </tr>
-        <tr>
-          <td>Janet Ault</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="10"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="11"></a></td>
-        </tr>
-        <tr>
-          <td>Jim Myers</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="12"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="13"></a></td>
-        </tr>
-        <tr>
-          <td>Mark Budwill</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="14"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="15"></a></td>
-        </tr>
-        <tr>
-          <td>Rachel Fulginiti</td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="16"></a></td>
-          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="17"></a></td>
-        </tr>
+        {% assign filtered_people = site.data.people %}
+        {% for person in filtered_people %}
+          <tr>
+            <td>{{ person.name }}</td>
+            <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="{% increment songindex %}"></a></td>
+            <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="{% increment songindex %}"></a></td>
+          </tr>
+        {% endfor %}
       </tbody>
     </table>
 
   </div>
 </body>
 
-<script type="text/javascript">
-  Amplitude.init({
-    "songs": [
-      {
-        "name"  : "Adam Lofbomm - Professional",
-        "artist": "Adam Lofbomm",
-        "album" : "Professional",
-        "url"   : "audio/adam-lofbomm-professional.mp3"
-      },
-      {
-        "name"  : "Adam Lofbomm - Casual",
-        "artist": "Adam Lofbomm",
-        "album" : "Casual",
-        "url"   : "audio/adam-lofbomm-casual.mp3"
-      },
-      {
-        "name"  : "Arielle DeLisle - Professional",
-        "artist": "Arielle DeLisle",
-        "album" : "Professional",
-        "url"   : "audio/arielle-delisle-professional.mp3"
-      },
-      {
-        "name"  : "Arielle DeLisle - Casual",
-        "artist": "Arielle DeLisle",
-        "album" : "Casual",
-        "url"   : "audio/arielle-delisle-casual.mp3"
-      },
-      {
-        "name"  : "Bill DeBusk - Professional",
-        "artist": "Bill DeBusk",
-        "album" : "Professional",
-        "url"   : "audio/bill-debusk-professional.mp3"
-      },
-      {
-        "name"  : "Bill DeBusk - Casual",
-        "artist": "Bill DeBusk",
-        "album" : "Casual",
-        "url"   : "audio/bill-debusk-casual.mp3"
-      },
-      {
-        "name"  : "Eric Bodrero - Professional",
-        "artist": "Eric Bodrero",
-        "album" : "Professional",
-        "url"   : "audio/eric-bodrero-professional.mp3"
-      },
-      {
-        "name"  : "Eric Bodrero - Casual",
-        "artist": "Eric Bodrero",
-        "album" : "Casual",
-        "url"   : "audio/eric-bodrero-casual.mp3"
-      },
-      {
-        "name"  : "Eric Hartmann - Professional",
-        "artist": "Eric Hartmann",
-        "album" : "Professional",
-        "url"   : "audio/eric-hartmann-professional.mp3"
-      },
-      {
-        "name"  : "Eric Hartmann - Casual",
-        "artist": "Eric Hartmann",
-        "album" : "Casual",
-        "url"   : "audio/eric-hartmann-casual.mp3"
-      },
-      {
-        "name"  : "Janet Ault - Professional",
-        "artist": "Janet Ault",
-        "album" : "Professional",
-        "url"   : "audio/janet-ault-professional.mp3"
-      },
-      {
-        "name"  : "Janet Aultn - Casual",
-        "artist": "Janet Ault",
-        "album" : "Casual",
-        "url"   : "audio/janet-ault-casual.mp3"
-      },
-      {
-        "name"  : "Jim Myers - Professional",
-        "artist": "Jim Myers",
-        "album" : "Professional",
-        "url"   : "audio/jim-myers-professional.mp3"
-      },
-      {
-        "name"  : "Jim Myers - Casual",
-        "artist": "Jim Myers",
-        "album" : "Casual",
-        "url"   : "audio/jim-myers-casual.mp3"
-      },
-      {
-        "name"  : "Mark Budwill - Professional",
-        "artist": "Mark Budwill",
-        "album" : "Professional",
-        "url"   : "audio/mark-budwill-professional.mp3"
-      },
-      {
-        "name"  : "Mark Budwill - Casual",
-        "artist": "Mark Budwill",
-        "album" : "Casual",
-        "url"   : "audio/mark-budwill-casual.mp3"
-      },
-      {
-        "name"  : "Rachel Fulginiti - Professional",
-        "artist": "Rachel Fulginiti",
-        "album" : "Professional",
-        "url"   : "audio/rachel-fulginiti-professional.mp3"
-      },
-      {
-        "name"  : "Rachel Fulginiti - Casual",
-        "artist": "Rachel Fulginiti",
-        "album" : "Casual",
-        "url"   : "audio/rachel-fulginiti-casual.mp3"
-      }
-    ]
-  });
-</script>
+  <script type="text/javascript">
+    Amplitude.init({
+      "songs": [
+        {% for person in filtered_people %}
+          {
+            "artist": "{{ person.name }}",
+            "album" : "Professional",
+            "url"   : "{{ person.professional }}"
+          },
+          {
+            "artist": "{{ person.name }}",
+            "album" : "Casual",
+            "url"   : "{{ person.casual }}"
+          }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+      ]
+    });
+  </script>
 
 </html>
