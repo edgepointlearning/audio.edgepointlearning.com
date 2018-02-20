@@ -1,0 +1,119 @@
+/* SVG FONT */
+@font-face {
+  font-family: 'glyphterregular';
+  src:
+    url('../fonts/glyphter-webfont.woff2') format('woff2'),
+    url('../fonts/glyphter-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.glyphter {
+  font-family: 'glyphterregular';
+  cursor: pointer;
+}
+
+body {
+  text-align: center;
+}
+
+#container {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+/* PLAYER */
+.player {
+  color: #767676;
+  text-align: left;
+}
+.title {
+  color: black;
+  font-weight: bold;
+}
+
+.right {
+  text-align: right;
+  padding-top: 1.5rem;
+}
+
+.controls {
+  background: #ececec;
+  border-radius: 1rem;
+  padding: 1.4rem 1rem 1rem 1rem;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.controls a:hover {
+  color: #12529e;
+}
+
+#play-pause {
+  margin: 0 0.5rem;
+}
+
+#play-pause.amplitude-paused::before {
+  content: "C";
+}
+
+#play-pause.amplitude-playing::before {
+  content: "D";
+}
+
+
+/* PLAYLIST */
+table {
+  border: 1px solid #12529e;
+}
+
+th {
+  background: #12529e;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+th:nth-of-type(n+2) {
+  text-align: center;
+  padding: 0.5em 1.5em;
+}
+
+td {
+  padding: 0.5em 1em;
+}
+
+td:first-of-type {
+  padding-left: 16px;
+}
+
+td:nth-of-type(n+2) {
+  text-align: center;
+}
+
+tr:hover td:nth-of-type(1) {
+  background: url(../images/icons8-sort_right_filled.svg) no-repeat -7px center/20px 20px;
+}
+
+/* INDIVIDUAL SONG BUTTONS */
+td a.glyphter {
+  font-size: 1.5em;
+}
+
+td a.glyphter:hover::before {
+  color: #186dd2;
+}
+
+.amplitude-song-container::before {
+  color: #8a8a8a;
+  content: "A";
+}
+
+.amplitude-active-song-container::before {
+  color: #186dd2;
+  content: "B";
+}
+
+.amplitude-active-song-container.amplitude-paused::before {
+  content: "A";
+}

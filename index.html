@@ -1,69 +1,210 @@
 <!doctype html>
-
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>EdgePoint Learning Audio Samples</title>
-  <meta name="description" content="EdgePoint Learning Audio Samples">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="style.css">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/picnic.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="javascript/amplitude.min.js"></script>
 </head>
 
 <body>
 
-  <div id="jquery_jplayer"></div>
+  <div id="container">
 
-  <div id="jp_container">
+    <p><img src="images/epl-horizontal-combination-mark.svg" alt="EdgePoint Learning"></p>
 
-    <figure>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 386 48.8" enable-background="new 0 0 386 48.8">
-        <g id="nav__logo__e" fill="rgb(18, 81, 158)"> <path d="m31.5 48.8h14.5c1.5 0 2.8-1.2 2.8-2.7v-10c-3.4 3.8-9.2 8.9-17.3 12.7z"/> <path d="m28.2 15.1c-0.2-2.6-2-4.1-6-3.8-7.9 0.6-14 9.5-15.7 18.8 17.2-1.4 21.9-11.8 21.7-15z"/> <path d="m26.7 5.8c8.2-0.6 11.9 2.7 12.2 6.7 0.7 8.8-13.8 19.3-32.9 20.9h-0.2c-0.6 3.1 0 6.2 0.5 7.4 1.4 3.5 4.9 4.8 8.9 4.8 17.7 0 30.8-19.6 33.6-28.5v-14.4c0-1.5-1.2-2.7-2.8-2.7h-43.3c-1.5 0-2.7 1.2-2.7 2.7v19.9c7-8.9 17.7-16.1 26.7-16.8z"/> </g>
-        <g id="nav__logo__edgepoint" fill="rgb(18, 81, 158)"> <path d="m84.4 33c2.4 0 4.1-1 5.5-2.4l1.6 1.4c-1.7 1.9-3.9 3.3-7.1 3.3-4.8 0-8.6-3.7-8.6-9 0-5 3.5-9 8.3-9 5.1 0 8.1 4.1 8.1 9.2v0.8h-13.9c0.3 3.6 3 5.7 6.1 5.7zm5-7.7c-0.3-3.1-2.1-5.9-5.5-5.9-3 0-5.3 2.5-5.6 5.9h11.1z" /> <path d="m110.5 34.9v-3.5c-1.4 2.1-3.5 3.9-6.6 3.9-4.2 0-8.3-3.3-8.3-9s4.1-9 8.3-9c3.2 0 5.3 1.7 6.6 3.7v-10.6h2.6v24.5h-2.6zm-6.2-15.4c-3.4 0-6.1 2.5-6.1 6.7 0 4.1 2.8 6.7 6.1 6.7 3.2 0 6.3-2.7 6.3-6.7s-3.1-6.7-6.3-6.7z" /> <path d="m126.5 40.3c-2.9 0-5.6-0.8-7.9-2.4l1.2-2c2 1.4 4.2 2.2 6.7 2.2 3.8 0 6.3-2.1 6.3-6.2v-2c-1.5 2-3.6 3.7-6.8 3.7-4.2 0-8.1-3.1-8.1-8.1 0-5.1 4-8.2 8.1-8.2 3.2 0 5.4 1.6 6.8 3.5v-3.1h2.6v14.3c-0.1 5.5-3.6 8.3-8.9 8.3zm-0.1-20.8c-3.3 0-6 2.2-6 5.9 0 3.6 2.8 5.9 6 5.9 3.3 0 6.4-2.3 6.4-5.9s-3.1-5.9-6.4-5.9z" /> <path d="m148.7 33c2.4 0 4.1-1 5.5-2.4l1.6 1.4c-1.7 1.9-3.9 3.3-7.1 3.3-4.8 0-8.6-3.7-8.6-9 0-5 3.5-9 8.3-9 5.1 0 8.1 4.1 8.1 9.2v0.8h-13.7c0.2 3.6 2.8 5.7 5.9 5.7zm5-7.7c-0.3-3.1-2.1-5.9-5.5-5.9-3 0-5.3 2.5-5.6 5.9h11.1z" /> <path d="m170.1 35.3c-3.2 0-5.3-1.7-6.6-3.7v8.7h-2.6v-22.7h2.6v3.4c1.4-2.1 3.5-3.9 6.6-3.9 4.2 0 8.3 3.3 8.3 9 0 5.8-4.1 9.2-8.3 9.2zm-0.5-15.8c-3.2 0-6.3 2.7-6.3 6.7 0 4.1 3 6.7 6.3 6.7 3.4 0 6.1-2.5 6.1-6.7 0-4.1-2.8-6.7-6.1-6.7z" /> <path d="m191 35.3c-5.2 0-9-4.1-9-9s3.8-9.1 9-9.1 9 4.1 9 9-3.7 9.1-9 9.1zm0-15.8c-3.8 0-6.3 3-6.3 6.7s2.7 6.8 6.4 6.8c3.8 0 6.4-3 6.4-6.7 0-3.8-2.8-6.8-6.5-6.8z" /> <path d="m204.8 13.8v-2.8h2.9v2.8h-2.9zm0.2 21.1v-17.3h2.6v17.3h-2.6z" /> <path d="m216.2 34.9h-2.6v-17.3h2.6v3c1.1-1.9 2.9-3.4 5.9-3.4 4.2 0 6.6 2.8 6.6 6.9v10.8h-2.6v-10.1c0-3.2-1.7-5.2-4.8-5.2-3 0-5.2 2.2-5.2 5.4v9.9z" /> <path d="m237.7 30c0 2.1 1.2 2.9 2.9 2.9 0.9 0 1.6-0.2 2.5-0.6v2.2c-0.9 0.5-1.9 0.7-3.1 0.7-2.8 0-4.9-1.4-4.9-4.9v-10.5h-2.4v-2.3h2.4v-5.2h2.6v5.2h5.5v2.3h-5.5v10.2z" /> </g>
-        <g id="nav__logo__learning" fill="rgb(158,159,163)"> <path d="m258 34.9v-24.5h2.6v24.5h-2.6z" /> <path d="m274.3 33c2.4 0 4.1-1 5.5-2.4l1.6 1.4c-1.7 1.9-3.9 3.3-7.1 3.3-4.8 0-8.6-3.7-8.6-9 0-5 3.5-9 8.3-9 5.1 0 8.1 4.1 8.1 9.2v0.8h-13.7c0.1 3.6 2.8 5.7 5.9 5.7zm5-7.7c-0.3-3.1-2.1-5.9-5.5-5.9-3 0-5.3 2.5-5.6 5.9h11.1z" /> <path d="m287.4 20.9l-0.8-2.1c1.9-0.9 3.8-1.4 6.3-1.4 4.7 0 7.4 2.4 7.4 7v10.6h-2.5v-2.6c-1.2 1.6-3.2 3-6.3 3-3.2 0-6.5-1.8-6.5-5.4 0-3.7 3-5.6 7.4-5.6 2.2 0 3.8 0.3 5.3 0.7v-0.6c0-3.1-1.9-4.7-5.2-4.7-1.8-0.2-3.4 0.3-5.1 1.1zm0.4 8.8c0 2.2 2 3.5 4.4 3.5 3.2 0 5.8-1.9 5.8-4.7v-1.7c-1.3-0.4-3-0.7-5.1-0.7-3.3 0-5.1 1.4-5.1 3.6z" /> <path d="m308.4 34.9h-2.6v-17.3h2.6v4.5c1.3-2.9 3.8-5 7.1-4.8v2.7h-0.2c-3.8 0-6.9 2.7-6.9 7.9v7z" /> <path d="m322 34.9h-2.6v-17.3h2.6v3c1.1-1.9 2.9-3.4 5.9-3.4 4.2 0 6.6 2.8 6.6 6.9v10.8h-2.5v-10.1c0-3.2-1.7-5.2-4.8-5.2-3 0-5.2 2.2-5.2 5.4v9.9z" /> <path d="m340.1 13.8v-2.8h2.9v2.8h-2.9zm0.2 21.1v-17.3h2.6v17.3h-2.6z" /> <path d="m351.4 34.9h-2.6v-17.3h2.6v3c1.1-1.9 2.9-3.4 5.9-3.4 4.2 0 6.6 2.8 6.6 6.9v10.8h-2.6v-10.1c0-3.2-1.7-5.2-4.8-5.2-3 0-5.2 2.2-5.2 5.4v9.9z" /> <path d="m377.2 40.3c-2.9 0-5.6-0.8-7.9-2.4l1.2-2c2 1.4 4.2 2.2 6.7 2.2 3.8 0 6.3-2.1 6.3-6.2v-2c-1.5 2-3.6 3.7-6.8 3.7-4.2 0-8.1-3.1-8.1-8.1 0-5.1 4-8.2 8.1-8.2 3.3 0 5.4 1.6 6.8 3.5v-3.1h2.6v14.3c-0.1 5.5-3.6 8.3-8.9 8.3zm-0.1-20.8c-3.3 0-6 2.2-6 5.9 0 3.6 2.8 5.9 6 5.9 3.3 0 6.4-2.3 6.4-5.9s-3.1-5.9-6.4-5.9z" /> </g>
-      </svg>
-    </figure>
-
-    <p>Choose an audio sample:</p>
-
-    <div class="jp-playlist">
-      <ul id="playlist">
-        <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-        <li></li>
-      </ul>
+    <div class="flex player">
+      <div class="half">
+        <small>Now Playing:</small>
+        <br>
+        <span class="title" amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+        <br>
+        <span amplitude-song-info="album" amplitude-main-song-info="true">
+      </div>
+      <div class="half right">
+        <span class="controls">
+          <a id="previous" class="glyphter amplitude-prev">E</a>
+          <a id="play-pause" class="glyphter amplitude-play-pause" amplitude-main-play-pause="true"></a>
+          <a id="next" class="glyphter amplitude-next">F</a>
+        </span>
+      </div>
     </div>
 
-    <ul id="controls">
-      <li>
-        <a class="jp-play" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path fill="rgb(88, 89, 91)" d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 29C8.82 29 3 23.18 3 16S8.82 3 16 3s13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"/>
-          </svg>
-
-        </a>
-        <a class="jp-pause" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path fill="rgb(88, 89, 91)" d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 29C8.82 29 3 23.18 3 16S8.82 3 16 3s13 5.82 13 13-5.82 13-13 13zm-6-19h4v12h-4zm8 0h4v12h-4z"/>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <span class="jp-title"></span>
-        <span class="jp-current-time"></span> /
-        <span class="jp-duration"></span>
-      </li>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Professional<br> Sample</th>
+          <th>Casual<br>  Sample</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adam Lofbomm</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="0"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="1"></a></td>
+        </tr>
+        <tr>
+          <td>Arielle DeLisle</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="2"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="3"></a></td>
+        </tr>
+        <tr>
+          <td>Bill DeBusk</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="4"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="5"></a></td>
+        </tr>
+        <tr>
+          <td>Eric Bodrero</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="6"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="7"></a></td>
+        </tr>
+        <tr>
+          <td>Eric Hartmann</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="8"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="9"></a></td>
+        </tr>
+        <tr>
+          <td>Janet Ault</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="10"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="11"></a></td>
+        </tr>
+        <tr>
+          <td>Jim Myers</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="12"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="13"></a></td>
+        </tr>
+        <tr>
+          <td>Mark Budwill</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="14"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="15"></a></td>
+        </tr>
+        <tr>
+          <td>Rachel Fulginiti</td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="16"></a></td>
+          <td><a class="song amplitude-song-container amplitude-play-pause glyphter" amplitude-song-index="17"></a></td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
-
-  <script src='js/jquery.min.js' type="text/javascript"></script>
-  <script src='js/jquery.jplayer.min.js' type="text/javascript"></script>
-  <script src='js/jplayer.playlist.min.js' type="text/javascript"></script>
-  <script src='js/my_playlist.js' type="text/javascript"></script>
 </body>
+
+<script type="text/javascript">
+  Amplitude.init({
+    "songs": [
+      {
+        "name"  : "Adam Lofbomm - Professional",
+        "artist": "Adam Lofbomm",
+        "album" : "Professional",
+        "url"   : "audio/adam-lofbomm-professional.mp3"
+      },
+      {
+        "name"  : "Adam Lofbomm - Casual",
+        "artist": "Adam Lofbomm",
+        "album" : "Casual",
+        "url"   : "audio/adam-lofbomm-casual.mp3"
+      },
+      {
+        "name"  : "Arielle DeLisle - Professional",
+        "artist": "Arielle DeLisle",
+        "album" : "Professional",
+        "url"   : "audio/arielle-delisle-professional.mp3"
+      },
+      {
+        "name"  : "Arielle DeLisle - Casual",
+        "artist": "Arielle DeLisle",
+        "album" : "Casual",
+        "url"   : "audio/arielle-delisle-casual.mp3"
+      },
+      {
+        "name"  : "Bill DeBusk - Professional",
+        "artist": "Bill DeBusk",
+        "album" : "Professional",
+        "url"   : "audio/bill-debusk-professional.mp3"
+      },
+      {
+        "name"  : "Bill DeBusk - Casual",
+        "artist": "Bill DeBusk",
+        "album" : "Casual",
+        "url"   : "audio/bill-debusk-casual.mp3"
+      },
+      {
+        "name"  : "Eric Bodrero - Professional",
+        "artist": "Eric Bodrero",
+        "album" : "Professional",
+        "url"   : "audio/eric-bodrero-professional.mp3"
+      },
+      {
+        "name"  : "Eric Bodrero - Casual",
+        "artist": "Eric Bodrero",
+        "album" : "Casual",
+        "url"   : "audio/eric-bodrero-casual.mp3"
+      },
+      {
+        "name"  : "Eric Hartmann - Professional",
+        "artist": "Eric Hartmann",
+        "album" : "Professional",
+        "url"   : "audio/eric-hartmann-professional.mp3"
+      },
+      {
+        "name"  : "Eric Hartmann - Casual",
+        "artist": "Eric Hartmann",
+        "album" : "Casual",
+        "url"   : "audio/eric-hartmann-casual.mp3"
+      },
+      {
+        "name"  : "Janet Ault - Professional",
+        "artist": "Janet Ault",
+        "album" : "Professional",
+        "url"   : "audio/janet-ault-professional.mp3"
+      },
+      {
+        "name"  : "Janet Aultn - Casual",
+        "artist": "Janet Ault",
+        "album" : "Casual",
+        "url"   : "audio/janet-ault-casual.mp3"
+      },
+      {
+        "name"  : "Jim Myers - Professional",
+        "artist": "Jim Myers",
+        "album" : "Professional",
+        "url"   : "audio/jim-myers-professional.mp3"
+      },
+      {
+        "name"  : "Jim Myers - Casual",
+        "artist": "Jim Myers",
+        "album" : "Casual",
+        "url"   : "audio/jim-myers-casual.mp3"
+      },
+      {
+        "name"  : "Mark Budwill - Professional",
+        "artist": "Mark Budwill",
+        "album" : "Professional",
+        "url"   : "audio/mark-budwill-professional.mp3"
+      },
+      {
+        "name"  : "Mark Budwill - Casual",
+        "artist": "Mark Budwill",
+        "album" : "Casual",
+        "url"   : "audio/mark-budwill-casual.mp3"
+      },
+      {
+        "name"  : "Rachel Fulginiti - Professional",
+        "artist": "Rachel Fulginiti",
+        "album" : "Professional",
+        "url"   : "audio/rachel-fulginiti-professional.mp3"
+      },
+      {
+        "name"  : "Rachel Fulginiti - Casual",
+        "artist": "Rachel Fulginiti",
+        "album" : "Casual",
+        "url"   : "audio/rachel-fulginiti-casual.mp3"
+      }
+    ]
+  });
+</script>
+
 </html>
