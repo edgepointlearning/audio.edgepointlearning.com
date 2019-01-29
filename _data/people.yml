@@ -1,6 +1,14 @@
-- name: Kyle
-  casual: audio/kyle-castellani-casual.mp3
-  professional: audio/kyle-castellani-professional.mp3
+- name: Arielle
+  casual: audio/arielle-delisle-casual.mp3
+  professional: audio/arielle-delisle-professional.mp3
+
+- name: Sandra
+  casual: audio/sandra-segrest-casual.mp3
+  professional: audio/sandra-segrest-professional.mp3
+
+- name: Shelley
+  casual: audio/shelley-avellino-casual.mp3
+  professional: audio/shelley-avellino-professional.mp3
 
 - name: Janet
   casual: audio/janet-ault-casual.mp3
@@ -10,6 +18,14 @@
   casual: audio/rachel-fulginiti-casual.mp3
   professional: audio/rachel-fulginiti-professional.mp3
 
+- name: Kyle
+  casual: audio/kyle-castellani-casual.mp3
+  professional: audio/kyle-castellani-professional.mp3
+
+- name: Eric B
+  casual: audio/eric-bodrero-casual.mp3
+  professional: audio/eric-bodrero-professional.mp3
+  
 - name: Bill
   casual: audio/bill-debusk-casual.mp3
   professional: audio/bill-debusk-professional.mp3
@@ -17,14 +33,6 @@
 - name: Eric H
   casual: audio/eric-hartmann-casual.mp3
   professional: audio/eric-hartmann-professional.mp3
-
-- name: Arielle
-  casual: audio/arielle-delisle-casual.mp3
-  professional: audio/arielle-delisle-professional.mp3
-
-- name: Eric B
-  casual: audio/eric-bodrero-casual.mp3
-  professional: audio/eric-bodrero-professional.mp3
 
 - name: Jim
   casual: audio/jim-myers-casual.mp3
