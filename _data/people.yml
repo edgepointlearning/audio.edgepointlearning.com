@@ -38,6 +38,14 @@
   casual: audio/shelley-avellino-casual.mp3
   professional: audio/shelley-avellino-professional.mp3
 
+- name: Lex
+  casual: audio/lex-van-nugent-casual.mp3
+  professional: audio/lex-van-nugent-professional.mp3
+
+- name: Melodie
+  casual: audio/melodie-maynor-casual.mp3
+  professional: audio/melodie-maynor-professional.mp3
+
 - name: Mark
   casual: audio/mark-budwill-casual.mp3
   professional: audio/mark-budwill-professional.mp3
