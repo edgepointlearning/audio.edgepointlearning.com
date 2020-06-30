@@ -1,7 +1,3 @@
-- name: Samantha
-  casual: audio/samantha-moore-casual.mp3
-  professional: audio/samantha-moore-professional.mp3
-
 - name: Kyle
   casual: audio/kyle-castellani-casual.mp3
   professional: audio/kyle-castellani-professional.mp3
@@ -45,7 +41,3 @@
 - name: Melodie
   casual: audio/melodie-maynor-casual.mp3
   professional: audio/melodie-maynor-professional.mp3
-
-- name: Bill
-  casual: audio/bill-debusk-casual.mp3
-  professional: audio/bill-debusk-professional.mp3
