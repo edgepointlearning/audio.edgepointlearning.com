@@ -1,10 +1,22 @@
+- name: Abbey
+  casual: audio/abbey-still-casual.mp3
+  professional: audio/abbey-still-professional.mp3
+
 - name: Arielle
   casual: audio/arielle-delisle-casual.mp3
   professional: audio/arielle-delisle-professional.mp3
 
+- name: Dana
+  casual: audio/dana-placentra-casual.mp3
+  professional: audio/dana-placentra-professional.mp3
+
 - name: Melodie
   casual: audio/melodie-maynor-casual.mp3
   professional: audio/melodie-maynor-professional.mp3
+
+- name: Rebecca
+  casual: audio/rebecca-stern-casual.mp3
+  professional: audio/rebecca-stern-professional.mp3
 
 - name: Sandra
   casual: audio/sandra-segrest-casual.mp3
