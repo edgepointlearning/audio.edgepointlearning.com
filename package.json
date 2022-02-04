@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "amplitudejs": "^5.3.2",
+    "picnic": "^7.1.0"
+  }
+}
