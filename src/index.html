@@ -1,6 +1,3 @@
----
-# this header tells jekyll to process this file
----
 <!doctype html>
 <html class="no-js" lang="en">
   
@@ -16,6 +13,7 @@
 
 <body>
   <div id="container">
+    
     <p><img src="images/epl-horizontal-combination-mark.svg" alt="EdgePoint Learning"></p>
 
     <div class="flex player">
@@ -49,8 +47,7 @@
         </tr>
       </thead>
       <tbody>
-        {% assign filtered_people = site.data.people %}
-        {% for person in filtered_people %}
+        {% for person in people %}
           <tr>
             <td>{{ person.name }}</td>
             <td><a class="song amplitude-song-container amplitude-play-pause glyphter" data-amplitude-song-index="{% increment songindex %}"></a></td>
@@ -66,7 +63,7 @@
   <script type="text/javascript">
     Amplitude.init({
       "songs": [
-        {% for person in filtered_people %}
+        {% for person in people %}
           {
             "artist": "{{ person.name }}",
             "album" : "Professional",
