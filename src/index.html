@@ -39,9 +39,9 @@
 
   <div class="container h-screen max-w-sm pt-8 mx-auto bg-white">
     
-    <svg class="w-full mx-auto mb-8 h-[50px]"><use xlink:href="#epl-logo"></use></svg>
-
-    <div class="flex justify-between mb-2">
+    <svg class="w-full mx-auto mb-12 h-[50px]"><use xlink:href="#epl-logo"></use></svg>
+    
+    <div class="flex justify-between mb-4">
       
       <div>
         <p class="text-sm text-gray-500">Now Playing:</p>
@@ -57,25 +57,26 @@
 
     </div>
 
-    <div class="relative mb-8">
+    <div class="relative mb-10">
       <progress class="absolute z-20 w-full h-1.5 amplitude-song-played-progress" data-amplitude-main-song-played-progress="true" value="0.5"></progress>
       <progress class="absolute z-10 w-full h-1.5 amplitude-buffered-progress" value="1"></progress>
     </div>
 
-    <table>
+    <table class="w-full rounded-md shadow-md shadow-gray-300">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Professional<br> Sample</th>
-          <th>Casual<br>  Sample</th>
+        <tr class="text-white bg-blue-900">
+          <th class="py-2 pl-4 font-normal text-left rounded-tl-md">Name</th>
+          <th class="py-2 font-normal">Professional<br> Sample</th>
+          <th class="py-2 pr-4 font-normal rounded-tr-md">Casual<br>  Sample</th>
         </tr>
       </thead>
       <tbody>
         {% for person in people %}
-          <tr>
-            <td>{{ person.name }}</td>
-            <td><a class="song amplitude-song-container amplitude-play-pause glyphter" data-amplitude-song-index="{% increment songindex %}"></a></td>
-            <td><a class="song amplitude-song-container amplitude-play-pause glyphter" data-amplitude-song-index="{% increment songindex %}"></a></td>
+        {% assign mod = forloop.index | modulo: 2 %}
+          <tr class="{% if mod == 0 %}bg-gray-100{% endif %} hover:bg-gray-200">
+            <td class="py-3 pl-4 text-xl">{{ person.name }}</td>
+            <td><div class="mx-auto bg-contain cursor-pointer song amplitude-song-container amplitude-play-pause w-9 h-9" data-amplitude-song-index="{% increment songindex %}"></div></td>
+            <td class="pr-4"><div class="mx-auto bg-contain cursor-pointer song amplitude-song-container amplitude-play-pause w-9 h-9" data-amplitude-song-index="{% increment songindex %}"></div></td>
           </tr>
         {% endfor %}
       </tbody>

@@ -28,10 +28,10 @@
 
   
   progress::-webkit-progress-value {
-    @apply bg-gray-300 rounded-xl;
+    @apply bg-gray-200 rounded-xl;
   }
   progress::-moz-progress-bar {
-    @apply bg-gray-300 rounded-xl;
+    @apply bg-gray-200 rounded-xl;
   }
 
   progress.amplitude-song-played-progress {
@@ -40,4 +40,18 @@
   progress.amplitude-song-played-progress::-webkit-progress-bar {
     @apply bg-transparent;
   }
+
+
+  .amplitude-song-container {
+    background: url(/images/icons8-play.svg) no-repeat;
+  }
+  
+  .amplitude-active-song-container {
+    background: url(/images/icons8-pause.svg) no-repeat;
+  }
+  
+  .amplitude-active-song-container.amplitude-paused {
+    background: url(/images/icons8-play.svg) no-repeat;
+  }
+
 }
