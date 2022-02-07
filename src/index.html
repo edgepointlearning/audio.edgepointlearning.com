@@ -37,39 +37,39 @@
     </symbol>
   </svg>
 
-  <div class="container h-screen max-w-sm p-3 mx-auto bg-white">
-    <svg class="w-full mx-auto my-12 h-[50px]"><use xlink:href="#epl-logo"></use></svg>
+  <div class="container max-w-sm mx-auto bg-white">
 
-    <div class="flex justify-between mb-4">
-      
+    <svg class="w-full my-8 h-[50px] px-4 mx-auto"><use xlink:href="#epl-logo"></use></svg>
+
+    <div class="sticky flex flex-wrap justify-between p-4 mb-8 shadow-lg -top-2 bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 rounded-xl shadow-indigo-300">     
       <div>
-        <p class="text-sm text-slate-500">Now Playing:</p>
-        <p data-amplitude-song-info="artist" data-amplitude-main-song-info="true" class="text-lg font-bold"></p>
-        <p data-amplitude-song-info="album" data-amplitude-main-song-info="true" class="text-lg text-slate-700"></p>
+        <p class="mb-2 text-xl font-bold leading-none text-white" data-amplitude-song-info="artist" data-amplitude-main-song-info="true"></p>
+        <p class="text-lg leading-none text-blue-100" data-amplitude-song-info="album" data-amplitude-main-song-info="true"></p>
       </div>
 
-      <div class="flex gap-2 px-4 my-1 bg-slate-200 rounded-2xl place-items-center fill-blue-600">
-        <svg class="bg-contain cursor-pointer h-9 w-9 amplitude-prev hover:fill-blue-900"><use xlink:href="#icons8-rewind"></use></svg>
+      <div class="flex gap-2 place-items-center fill-blue-200">
+        <svg class="bg-contain cursor-pointer h-9 w-9 amplitude-prev hover:fill-white"><use xlink:href="#icons8-rewind"></use></svg>
         <div class="w-12 h-12 bg-contain cursor-pointer amplitude-play-pause" data-amplitude-main-play-pause="true">
-          <svg class="w-12 h-12 hover:fill-blue-900" id="button-play"><use xlink:href="#icons8-play"></use></svg>
-          <svg class="w-12 h-12 hover:fill-blue-900" id="button-pause"><use xlink:href="#icons8-pause"></use></svg>
+          <svg class="w-12 h-12 hover:fill-white" id="button-play"><use xlink:href="#icons8-play"></use></svg>
+          <svg class="w-12 h-12 hover:fill-white" id="button-pause"><use xlink:href="#icons8-pause"></use></svg>
         </div>
-        <svg class="bg-contain cursor-pointer hover:fill-blue-900 h-9 w-9 amplitude-next"><use xlink:href="#icons8-fast_forward"></use></svg>
+        <svg class="bg-contain cursor-pointer hover:fill-white h-9 w-9 amplitude-next"><use xlink:href="#icons8-fast_forward"></use></svg>
       </div>
 
+      <div class="relative w-full h-1 mt-3">
+        <progress class="absolute z-20 rounded-full amplitude-song-played-progress" data-amplitude-main-song-played-progress="true" value="0.5"></progress>
+        <progress class="absolute z-10 rounded-full amplitude-buffered-progress" value="1"></progress>
+      </div>
     </div>
 
-    <div class="relative mb-10">
-      <progress class="absolute z-20 w-full h-1 amplitude-song-played-progress" data-amplitude-main-song-played-progress="true" value="0.5"></progress>
-      <progress class="absolute z-10 w-full h-1 amplitude-buffered-progress" value="1"></progress>
-    </div>
 
-    <table class="w-full rounded-md shadow-md shadow-slate-300">
+
+    <table class="w-full shadow-md shadow-slate-300 rounded-xl">
       <thead>
-        <tr class="text-white bg-blue-900">
-          <th class="py-2 pl-4 font-normal text-left rounded-tl-md">Name</th>
-          <th class="py-2 font-normal">Professional<br> Sample</th>
-          <th class="py-2 pr-4 font-normal rounded-tr-md">Casual<br>  Sample</th>
+        <tr class="leading-4 tracking-wide border-b-2 border-slate-500 bg-slate-100 text-slate-600">
+          <th class="pt-4 pb-3 pl-4 font-normal text-left rounded-tl-xl">Name</th>
+          <th class="pt-4 pb-3 font-normal ">Professional<br> Sample</th>
+          <th class="pt-4 pb-3 pr-4 font-normal rounded-tr-xl">Casual<br>  Sample</th>
         </tr>
       </thead>
       <tbody>

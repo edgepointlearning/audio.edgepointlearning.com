@@ -10,41 +10,15 @@ polyline, path {
   stroke:inherit;
 }
 
+/* swap svg's based on play state */
 .amplitude-play-pause.amplitude-paused #button-pause {
-  display: none;
+  @apply hidden;
 }
 .amplitude-play-pause.amplitude-playing #button-play {
-  display: none;
+  @apply hidden;
 }
 
-progress {
-  @apply bg-slate-300;
-}
-progress::-webkit-progress-bar {
-  @apply bg-slate-300;
-}
-
-progress.amplitude-song-played-progress::-webkit-progress-value {
-  @apply bg-blue-500;
-}
-progress.amplitude-song-played-progress::-moz-progress-bar {
-  @apply bg-blue-500;
-}
-
-progress::-webkit-progress-value {
-  @apply bg-slate-200;
-}
-progress::-moz-progress-bar {
-  @apply bg-slate-200;
-}
-
-progress.amplitude-song-played-progress {
-  @apply bg-transparent;
-}
-progress.amplitude-song-played-progress::-webkit-progress-bar {
-  @apply bg-transparent;
-}
-
+/* swap svg's based on play state (table) */
 .amplitude-active-song-container {
   @apply bg-blue-600 fill-white;
 }
@@ -60,4 +34,39 @@ progress.amplitude-song-played-progress::-webkit-progress-bar {
 }
 .amplitude-active-song-container.amplitude-paused .button-play {
   @apply block;
+}
+
+/* override progress default styling http://html5doctor.com/the-progress-element/ */
+progress {
+  @apply w-full h-1 bg-indigo-900;
+}
+
+/* style playing foreground color */
+progress.amplitude-song-played-progress::-webkit-progress-value {
+  @apply bg-blue-300 rounded-full;
+}
+progress.amplitude-song-played-progress::-moz-progress-bar {
+  @apply bg-blue-300 rounded-full;
+}
+/* style playing background color */
+progress.amplitude-song-played-progress {
+  @apply bg-transparent;
+}
+progress.amplitude-song-played-progress::-webkit-progress-bar {
+  @apply bg-transparent;
+}
+
+/* style buffer foreground color */
+progress.amplitude-buffered-progress::-webkit-progress-value {
+  @apply bg-indigo-600 rounded-full;
+}
+progress.amplitude-buffered-progress::-moz-progress-bar {
+  @apply bg-indigo-600 rounded-full;
+}
+/* style buffer background color */
+progress.amplitude-buffered-progress {
+  @apply bg-indigo-900;
+}
+progress.amplitude-buffered-progress::-webkit-progress-bar {
+  @apply bg-indigo-900;
 }
