@@ -1,0 +1,43 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+  .amplitude-play-pause.amplitude-paused {
+    background: url(/images/icons8-play.svg) no-repeat;
+  }
+  .amplitude-play-pause.amplitude-playing {
+    background: url(/images/icons8-pause.svg) no-repeat;
+  }
+
+  progress {
+    @apply bg-gray-600 rounded-xl;
+  }
+  progress::-webkit-progress-bar {
+    @apply bg-gray-600 rounded-xl;
+  }
+  
+  progress.amplitude-song-played-progress::-webkit-progress-value {
+    @apply bg-blue-700;
+  }
+  progress.amplitude-song-played-progress::-moz-progress-bar {
+    @apply bg-blue-700;
+  }
+
+  
+  progress::-webkit-progress-value {
+    @apply bg-gray-300 rounded-xl;
+  }
+  progress::-moz-progress-bar {
+    @apply bg-gray-300 rounded-xl;
+  }
+
+  progress.amplitude-song-played-progress {
+    @apply bg-transparent;
+  }
+  progress.amplitude-song-played-progress::-webkit-progress-bar {
+    @apply bg-transparent;
+  }
+}
