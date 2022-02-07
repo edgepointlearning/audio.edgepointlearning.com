@@ -4,54 +4,60 @@
 
 @tailwind utilities;
 
-@layer utilities {
-  .amplitude-play-pause.amplitude-paused {
-    background: url(/images/icons8-play.svg) no-repeat;
-  }
-  .amplitude-play-pause.amplitude-playing {
-    background: url(/images/icons8-pause.svg) no-repeat;
-  }
+/* hack to style svg sprites https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ */
+polyline, path {
+  fill:inherit;
+  stroke:inherit;
+}
 
-  progress {
-    @apply bg-gray-600 rounded-xl;
-  }
-  progress::-webkit-progress-bar {
-    @apply bg-gray-600 rounded-xl;
-  }
-  
-  progress.amplitude-song-played-progress::-webkit-progress-value {
-    @apply bg-blue-700;
-  }
-  progress.amplitude-song-played-progress::-moz-progress-bar {
-    @apply bg-blue-700;
-  }
+.amplitude-play-pause.amplitude-paused #button-pause {
+  display: none;
+}
+.amplitude-play-pause.amplitude-playing #button-play {
+  display: none;
+}
 
-  
-  progress::-webkit-progress-value {
-    @apply bg-gray-200 rounded-xl;
-  }
-  progress::-moz-progress-bar {
-    @apply bg-gray-200 rounded-xl;
-  }
+progress {
+  @apply bg-slate-300;
+}
+progress::-webkit-progress-bar {
+  @apply bg-slate-300;
+}
 
-  progress.amplitude-song-played-progress {
-    @apply bg-transparent;
-  }
-  progress.amplitude-song-played-progress::-webkit-progress-bar {
-    @apply bg-transparent;
-  }
+progress.amplitude-song-played-progress::-webkit-progress-value {
+  @apply bg-blue-500;
+}
+progress.amplitude-song-played-progress::-moz-progress-bar {
+  @apply bg-blue-500;
+}
 
+progress::-webkit-progress-value {
+  @apply bg-slate-200;
+}
+progress::-moz-progress-bar {
+  @apply bg-slate-200;
+}
 
-  .amplitude-song-container {
-    background: url(/images/icons8-play.svg) no-repeat;
-  }
-  
-  .amplitude-active-song-container {
-    background: url(/images/icons8-pause.svg) no-repeat;
-  }
-  
-  .amplitude-active-song-container.amplitude-paused {
-    background: url(/images/icons8-play.svg) no-repeat;
-  }
+progress.amplitude-song-played-progress {
+  @apply bg-transparent;
+}
+progress.amplitude-song-played-progress::-webkit-progress-bar {
+  @apply bg-transparent;
+}
 
+.amplitude-active-song-container {
+  @apply bg-blue-600 fill-white;
+}
+
+.amplitude-active-song-container.amplitude-playing .button-pause {
+  @apply block;
+}
+.amplitude-active-song-container.amplitude-playing .button-play {
+  @apply hidden;
+}
+.amplitude-active-song-container.amplitude-paused .button-pause {
+  @apply hidden;
+}
+.amplitude-active-song-container.amplitude-paused .button-play {
+  @apply block;
 }
