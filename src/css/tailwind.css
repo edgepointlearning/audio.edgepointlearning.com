@@ -1,0 +1,72 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* hack to style svg sprites https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ */
+polyline, path {
+  fill:inherit;
+  stroke:inherit;
+}
+
+/* swap svg's based on play state */
+.amplitude-play-pause.amplitude-paused #button-pause {
+  @apply hidden;
+}
+.amplitude-play-pause.amplitude-playing #button-play {
+  @apply hidden;
+}
+
+/* swap svg's based on play state (table) */
+.amplitude-active-song-container {
+  @apply bg-blue-600 fill-white;
+}
+
+.amplitude-active-song-container.amplitude-playing .button-pause {
+  @apply block;
+}
+.amplitude-active-song-container.amplitude-playing .button-play {
+  @apply hidden;
+}
+.amplitude-active-song-container.amplitude-paused .button-pause {
+  @apply hidden;
+}
+.amplitude-active-song-container.amplitude-paused .button-play {
+  @apply block;
+}
+
+/* override progress default styling http://html5doctor.com/the-progress-element/ */
+progress {
+  @apply w-full h-1 bg-indigo-900;
+}
+
+/* style playing foreground color */
+progress.amplitude-song-played-progress::-webkit-progress-value {
+  @apply bg-blue-300 rounded-full;
+}
+progress.amplitude-song-played-progress::-moz-progress-bar {
+  @apply bg-blue-300 rounded-full;
+}
+/* style playing background color */
+progress.amplitude-song-played-progress {
+  @apply bg-transparent;
+}
+progress.amplitude-song-played-progress::-webkit-progress-bar {
+  @apply bg-transparent;
+}
+
+/* style buffer foreground color */
+progress.amplitude-buffered-progress::-webkit-progress-value {
+  @apply bg-indigo-600 rounded-full;
+}
+progress.amplitude-buffered-progress::-moz-progress-bar {
+  @apply bg-indigo-600 rounded-full;
+}
+/* style buffer background color */
+progress.amplitude-buffered-progress {
+  @apply bg-indigo-900;
+}
+progress.amplitude-buffered-progress::-webkit-progress-bar {
+  @apply bg-indigo-900;
+}
