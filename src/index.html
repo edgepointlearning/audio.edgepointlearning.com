@@ -39,9 +39,9 @@
 
   <div class="container max-w-sm mx-auto bg-white">
 
-    <svg class="w-full my-8 h-[50px] px-4 mx-auto"><use xlink:href="#epl-logo"></use></svg>
+    <svg class="w-full my-10 h-[50px] px-4 mx-auto"><use xlink:href="#epl-logo"></use></svg>
 
-    <div class="sticky flex flex-wrap justify-between p-4 mb-8 shadow-lg -top-2 bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 rounded-xl shadow-indigo-300">     
+    <div class="sticky flex flex-wrap justify-between p-4 mb-8 shadow-md -top-2 bg-gradient-to-bl from-indigo-900 via-blue-700 to-indigo-900 rounded-xl shadow-slate-400">     
       <div>
         <p class="mb-2 text-xl font-bold leading-none text-white" data-amplitude-song-info="artist" data-amplitude-main-song-info="true"></p>
         <p class="text-lg leading-none text-blue-100" data-amplitude-song-info="album" data-amplitude-main-song-info="true"></p>
@@ -103,12 +103,12 @@
         {% for person in people %}
           {
             "artist": "{{ person.name }}",
-            "album" : "Professional",
+            "album" : "Professional Sample",
             "url"   : "{{ person.professional }}"
           },
           {
             "artist": "{{ person.name }}",
-            "album" : "Casual",
+            "album" : "Casual Sample",
             "url"   : "{{ person.casual }}"
           }{% if forloop.last == false %},{% endif %}
         {% endfor %}
