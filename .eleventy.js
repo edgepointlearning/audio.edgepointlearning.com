@@ -1,10 +1,9 @@
+const metagen = require('eleventy-plugin-metagen');
+
 module.exports = function(eleventyConfig) {
-  
-  // Copy '/src/assets/' to site root
   eleventyConfig.addPassthroughCopy({'./src/assets': '/'});
-  // eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addWatchTarget('./src/css/tailwind.css');
-  // Set input and output directories
+  eleventyConfig.addPlugin(metagen);
   return {
     dir: {
       input: 'src/*.html',
