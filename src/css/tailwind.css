@@ -5,10 +5,9 @@
 @tailwind utilities;
 
 /* hack to style svg sprites https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ */
-polyline, path {
+/* svg use path {
   fill:inherit;
-  stroke:inherit;
-}
+} */
 
 /* swap svg's based on play state */
 .amplitude-play-pause.amplitude-paused #button-pause {
