@@ -9,7 +9,7 @@
   fill:inherit;
 } */
 
-/* swap svg's based on play state */
+/* swap svg's based on play state (player)*/
 .amplitude-play-pause.amplitude-paused #button-pause {
   @apply hidden;
 }
@@ -17,11 +17,12 @@
   @apply hidden;
 }
 
-/* swap svg's based on play state (table) */
+/* hightlight current song (playlist) */
 .amplitude-active-song-container {
   @apply bg-blue-600 fill-white;
 }
 
+/* swap svg's based on play state (playlist) */
 .amplitude-active-song-container.amplitude-playing .button-pause {
   @apply block;
 }
@@ -40,14 +41,14 @@ progress {
   @apply w-full h-1 bg-indigo-900;
 }
 
-/* style playing foreground color */
+/* progress: style playing foreground color */
 progress.amplitude-song-played-progress::-webkit-progress-value {
   @apply bg-blue-300 rounded-full;
 }
 progress.amplitude-song-played-progress::-moz-progress-bar {
   @apply bg-blue-300 rounded-full;
 }
-/* style playing background color */
+/* progress: style playing background color */
 progress.amplitude-song-played-progress {
   @apply bg-transparent;
 }
@@ -55,14 +56,14 @@ progress.amplitude-song-played-progress::-webkit-progress-bar {
   @apply bg-transparent;
 }
 
-/* style buffer foreground color */
+/* progress: style buffer foreground color */
 progress.amplitude-buffered-progress::-webkit-progress-value {
   @apply bg-indigo-600 rounded-full;
 }
 progress.amplitude-buffered-progress::-moz-progress-bar {
   @apply bg-indigo-600 rounded-full;
 }
-/* style buffer background color */
+/* progress: style buffer background color */
 progress.amplitude-buffered-progress {
   @apply bg-indigo-900;
 }
