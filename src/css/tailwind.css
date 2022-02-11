@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 /* hack to style svg sprites https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ */
-/* svg use path {
+svg {
   fill:inherit;
-} */
+}
 
 /* swap svg's based on play state (player)*/
-.amplitude-play-pause.amplitude-paused #button-pause {
+.amplitude-play-pause.amplitude-paused .button-pause {
   @apply hidden;
 }
-.amplitude-play-pause.amplitude-playing #button-play {
+.amplitude-play-pause.amplitude-playing .button-play {
   @apply hidden;
 }
 
@@ -34,6 +34,11 @@
 }
 .amplitude-active-song-container.amplitude-paused .button-play {
   @apply block;
+}
+
+/* enlarge active song's play button (playlist) */
+.amplitude-active-song-container {
+  @apply w-9 h-9;
 }
 
 /* override progress default styling http://html5doctor.com/the-progress-element/ */
