@@ -4,6 +4,15 @@
 
 @tailwind utilities;
 
+@layer components {
+  .playlist-button {
+    @apply flex justify-center w-8 h-8 mx-auto transition-all rounded-full cursor-pointer hover:w-9 hover:h-9 hover:playlist-button-shadow bg-slate-400 fill-white hover:bg-blue-600 place-items-center;
+  }
+  .playlist-button-shadow {
+    @apply shadow-md shadow-indigo-400;
+  }
+}
+
 /* hack to style svg sprites https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ */
 svg {
   fill:inherit;
@@ -38,7 +47,7 @@ svg {
 
 /* enlarge active song's play button (playlist) */
 .amplitude-active-song-container {
-  @apply w-9 h-9;
+  @apply w-9 h-9 playlist-button-shadow;
 }
 
 /* override progress default styling http://html5doctor.com/the-progress-element/ */

@@ -63,13 +63,13 @@ og-data:
           <tr class="{% if mod == 0 %}bg-slate-100{% endif %}">
             <td class="py-4 pl-4 text-xl">{{ person.name }}</td>
             <td>
-              <div class="flex justify-center w-8 h-8 mx-auto transition-all rounded-full cursor-pointer hover:w-9 hover:h-9 bg-slate-500 fill-white hover:bg-blue-600 amplitude-song-container amplitude-play-pause place-items-center" data-amplitude-song-index="{% increment songindex %}">
+              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{% increment songindex %}">
                 {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
                 {% svg "audio", "hidden w-6 h-6 button-pause" %}
               </div>
             </td>
             <td class="pr-4">
-              <div class="flex justify-center w-8 h-8 mx-auto transition-all rounded-full cursor-pointer hover:w-9 hover:h-9 bg-slate-500 fill-white hover:bg-blue-600 amplitude-song-container amplitude-play-pause place-items-center" data-amplitude-song-index="{% increment songindex %}">
+              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{% increment songindex %}">
                 {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
                 {% svg "audio", "hidden w-6 h-6 button-pause" %}
               </div>
