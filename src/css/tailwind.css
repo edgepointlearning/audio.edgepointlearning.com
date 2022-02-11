@@ -4,25 +4,34 @@
 
 @tailwind utilities;
 
+@layer components {
+  .playlist-button {
+    @apply flex justify-center w-8 h-8 mx-auto transition-all rounded-full cursor-pointer hover:w-9 hover:h-9 hover:playlist-button-shadow bg-slate-400 fill-white hover:bg-blue-600 place-items-center;
+  }
+  .playlist-button-shadow {
+    @apply shadow-md shadow-indigo-400;
+  }
+}
+
 /* hack to style svg sprites https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ */
-polyline, path {
+svg {
   fill:inherit;
-  stroke:inherit;
 }
 
-/* swap svg's based on play state */
-.amplitude-play-pause.amplitude-paused #button-pause {
+/* swap svg's based on play state (player)*/
+.amplitude-play-pause.amplitude-paused .button-pause {
   @apply hidden;
 }
-.amplitude-play-pause.amplitude-playing #button-play {
+.amplitude-play-pause.amplitude-playing .button-play {
   @apply hidden;
 }
 
-/* swap svg's based on play state (table) */
+/* hightlight current song (playlist) */
 .amplitude-active-song-container {
   @apply bg-blue-600 fill-white;
 }
 
+/* swap svg's based on play state (playlist) */
 .amplitude-active-song-container.amplitude-playing .button-pause {
   @apply block;
 }
@@ -36,19 +45,24 @@ polyline, path {
   @apply block;
 }
 
+/* enlarge active song's play button (playlist) */
+.amplitude-active-song-container {
+  @apply w-9 h-9 playlist-button-shadow;
+}
+
 /* override progress default styling http://html5doctor.com/the-progress-element/ */
 progress {
   @apply w-full h-1 bg-indigo-900;
 }
 
-/* style playing foreground color */
+/* progress: style playing foreground color */
 progress.amplitude-song-played-progress::-webkit-progress-value {
   @apply bg-blue-300 rounded-full;
 }
 progress.amplitude-song-played-progress::-moz-progress-bar {
   @apply bg-blue-300 rounded-full;
 }
-/* style playing background color */
+/* progress: style playing background color */
 progress.amplitude-song-played-progress {
   @apply bg-transparent;
 }
@@ -56,14 +70,14 @@ progress.amplitude-song-played-progress::-webkit-progress-bar {
   @apply bg-transparent;
 }
 
-/* style buffer foreground color */
+/* progress: style buffer foreground color */
 progress.amplitude-buffered-progress::-webkit-progress-value {
   @apply bg-indigo-600 rounded-full;
 }
 progress.amplitude-buffered-progress::-moz-progress-bar {
   @apply bg-indigo-600 rounded-full;
 }
-/* style buffer background color */
+/* progress: style buffer background color */
 progress.amplitude-buffered-progress {
   @apply bg-indigo-900;
 }
