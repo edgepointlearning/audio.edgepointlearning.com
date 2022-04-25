@@ -10,6 +10,11 @@
      "professional": "audio/arielle-delisle-professional.mp3"
   },
   {
+    "name": "Ashlinn",
+    "casual": "audio/ashlinn-romagnoli-casual.mp3",
+    "professional": "audio/ashlinn-romagnoli-professional.mp3"
+  },
+  {
      "name": "Dana",
      "casual": "audio/dana-placentra-casual.mp3",
      "professional": "audio/dana-placentra-professional.mp3"
