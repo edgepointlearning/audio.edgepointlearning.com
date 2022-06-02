@@ -4,7 +4,7 @@ const svgSprite = require('eleventy-plugin-svg-sprite');
 
 const htmlmin = require('html-minifier');
 
-// const CleanCSS = require('clean-css');
+const CleanCSS = require('clean-css');
 const postCss = require('postcss');
 const tailwind = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
@@ -35,25 +35,23 @@ module.exports = function(eleventyConfig) {
 
   // process postcss & minify with clean-css
   eleventyConfig.addNunjucksAsyncFilter('postcss', (cssCode, done) => {
-    // const cleanCss = new CleanCSS({});
+    const cleanCss = new CleanCSS({});
     postCss([tailwind,autoprefixer])
       .process( cssCode, { from: undefined } )
       .then( 
-        r => done(null, r.css),
-        e => done(e, null)
-      )
-      //   (r) => {
-      //     const result = cleanCss.minify(r.css);
-      //       if (result.errors.length) {
-      //         done(result.errors, null);
-      //       } else {
-      //         done(null, result.styles);
-      //       }
-      //   },
-      //   (e) => {
-      //     done(e, null);
-      //   }
-      // );
+        // r => done(null, r.css), e => done(e, null) )
+        (r) => {
+          const result = cleanCss.minify(r.css);
+            if (result.errors.length) {
+              done(result.errors, null);
+            } else {
+              done(null, result.styles);
+            }
+        },
+        (e) => {
+          done(e, null);
+        }
+      );
   });
 
   // minify html with html-minifier
