@@ -8,19 +8,27 @@ og-data:
 ---
 <!doctype html>
 <html class="no-js" lang="en">
-  
-<head>
-  <meta charset="utf-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/styles.css">
-  <script type="text/javascript" src="javascript/amplitude.min.js"></script>
-  <title>EdgePoint Learning Audio Samples</title>
-  {% metagen og-data %}
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="amplitude.min.js"></script>
+    <title>EdgePoint Learning Audio Samples</title>
+    {% favicons './src/_includes/favicon.svg' %}
+    {% metagen og-data %}
+
+    <style>
+      {% set css %}
+        {% include "styles.css" %}
+      {% endset %}
+      {{css | postcss | safe}}
+    </style>
+  </head>
 
 <body class="bg-white">
-  {% svgsprite, "w-full my-10 h-[50px] px-4 mx-auto" %}
+  {% svgsprite %}
 
   <div class="container max-w-sm mx-auto">
 
@@ -47,8 +55,6 @@ og-data:
       </div>
     </div>
 
-
-
     <table class="w-full mb-4 bg-white shadow-md shadow-slate-300 rounded-xl">
       <thead>
         <tr class="leading-4 tracking-wide border-b-2 border-slate-500 bg-slate-100 text-slate-600">
@@ -58,18 +64,18 @@ og-data:
         </tr>
       </thead>
       <tbody>
+        {% set count = 0 %}
         {% for person in people %}
-        {% assign mod = forloop.index | modulo: 2 %}
-          <tr class="{% if mod == 0 %}bg-slate-100{% endif %}">
+          <tr class="{{'bg-slate-100' if loop.index % 2 == 0}}">
             <td class="py-4 pl-4 text-xl">{{ person.name }}</td>
             <td>
-              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{% increment songindex %}">
+              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
                 {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
                 {% svg "audio", "hidden w-6 h-6 button-pause" %}
               </div>
             </td>
             <td class="pr-4">
-              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{% increment songindex %}">
+              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
                 {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
                 {% svg "audio", "hidden w-6 h-6 button-pause" %}
               </div>
@@ -95,7 +101,7 @@ og-data:
             "artist": "{{ person.name }}",
             "album" : "Casual Sample",
             "url"   : "{{ person.casual }}"
-          }{% if forloop.last == false %},{% endif %}
+          }{% if loop.last == false %},{% endif %}
         {% endfor %}
       ]
     });
