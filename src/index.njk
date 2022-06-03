@@ -13,6 +13,7 @@ og-data:
     <meta name="robots" content="noindex, nofollow">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFFFFF">
 
     <script type="text/javascript" src="amplitude.min.js"></script>
     <title>EdgePoint Learning Audio Samples</title>
@@ -27,66 +28,66 @@ og-data:
     </style>
   </head>
 
-<body class="bg-white">
-  {% svgsprite %}
+  <body class="bg-white">
+    {% svgsprite %}
 
-  <div class="container max-w-sm mx-auto">
+    <div class="container max-w-sm mx-auto">
 
-    {% svg "epl-logo", "w-full my-10 h-[50px] px-4 mx-auto" %}
+      {% svg "epl-logo", "w-full my-10 h-[50px] px-4 mx-auto" %}
 
-    <div class="sticky flex flex-wrap justify-between p-4 mb-8 shadow-md -top-2 bg-gradient-to-bl from-indigo-900 via-blue-700 to-indigo-900 rounded-xl shadow-indigo-400">     
-      <div>
-        <p class="mb-2 text-xl font-bold leading-none text-white" data-amplitude-song-info="artist" data-amplitude-main-song-info="true"></p>
-        <p class="text-lg leading-none text-blue-100" data-amplitude-song-info="album" data-amplitude-main-song-info="true"></p>
-      </div>
-
-      <div class="flex gap-3 place-items-center fill-blue-200">
-        {% svg "rewind", "cursor-pointer h-9 w-9 amplitude-prev hover:fill-white" %}
-        <div class="w-10 h-10 bg-contain cursor-pointer amplitude-play-pause" data-amplitude-main-play-pause="true">
-          {% svg "play", "w-10 h-10 hover:fill-white button-play" %}
-          {% svg "pause", "w-10 h-10 hover:fill-white button-pause" %}
+      <div class="sticky flex flex-wrap justify-between p-4 mb-8 shadow-md -top-2 bg-gradient-to-bl from-indigo-900 via-blue-700 to-indigo-900 rounded-xl shadow-indigo-400">     
+        <div>
+          <p class="mb-2 text-xl font-bold leading-none text-white" data-amplitude-song-info="artist" data-amplitude-main-song-info="true"></p>
+          <p class="text-lg leading-none text-blue-100" data-amplitude-song-info="album" data-amplitude-main-song-info="true"></p>
         </div>
-        {% svg "fast-forward", "cursor-pointer hover:fill-white h-9 w-9 amplitude-next" %}
+
+        <div class="flex gap-3 place-items-center fill-blue-200">
+          {% svg "rewind", "cursor-pointer h-9 w-9 amplitude-prev hover:fill-white" %}
+          <div class="w-10 h-10 bg-contain cursor-pointer amplitude-play-pause" data-amplitude-main-play-pause="true">
+            {% svg "play", "w-10 h-10 hover:fill-white button-play" %}
+            {% svg "pause", "w-10 h-10 hover:fill-white button-pause" %}
+          </div>
+          {% svg "fast-forward", "cursor-pointer hover:fill-white h-9 w-9 amplitude-next" %}
+        </div>
+
+        <div class="relative w-full h-1 mt-3">
+          <progress class="absolute z-20 rounded-full amplitude-song-played-progress" data-amplitude-main-song-played-progress="true" value="0.5"></progress>
+          <progress class="absolute z-10 rounded-full amplitude-buffered-progress" value="1"></progress>
+        </div>
       </div>
 
-      <div class="relative w-full h-1 mt-3">
-        <progress class="absolute z-20 rounded-full amplitude-song-played-progress" data-amplitude-main-song-played-progress="true" value="0.5"></progress>
-        <progress class="absolute z-10 rounded-full amplitude-buffered-progress" value="1"></progress>
-      </div>
-    </div>
-
-    <table class="w-full mb-4 bg-white shadow-md shadow-slate-300 rounded-xl">
-      <thead>
-        <tr class="leading-4 tracking-wide border-b-2 border-slate-500 bg-slate-100 text-slate-600">
-          <th class="pt-4 pb-3 pl-4 font-normal text-left rounded-tl-xl">Name</th>
-          <th class="pt-4 pb-3 font-normal ">Professional<br> Sample</th>
-          <th class="pt-4 pb-3 pr-4 font-normal rounded-tr-xl">Casual<br>  Sample</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% set count = 0 %}
-        {% for person in people %}
-          <tr class="{{'bg-slate-100' if loop.index % 2 == 0}}">
-            <td class="py-4 pl-4 text-xl">{{ person.name }}</td>
-            <td>
-              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
-                {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
-                {% svg "audio", "hidden w-6 h-6 button-pause" %}
-              </div>
-            </td>
-            <td class="pr-4">
-              <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
-                {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
-                {% svg "audio", "hidden w-6 h-6 button-pause" %}
-              </div>
-            </td>
+      <table class="w-full mb-4 bg-white shadow-md shadow-slate-300 rounded-xl">
+        <thead>
+          <tr class="leading-4 tracking-wide border-b-2 border-slate-500 bg-slate-100 text-slate-600">
+            <th class="pt-4 pb-3 pl-4 font-normal text-left rounded-tl-xl">Name</th>
+            <th class="pt-4 pb-3 font-normal ">Professional<br> Sample</th>
+            <th class="pt-4 pb-3 pr-4 font-normal rounded-tr-xl">Casual<br>  Sample</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {% set count = 0 %}
+          {% for person in people %}
+            <tr class="{{'bg-slate-100' if loop.index % 2 == 0}}">
+              <td class="py-4 pl-4 text-xl">{{ person.name }}</td>
+              <td>
+                <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
+                  {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
+                  {% svg "audio", "hidden w-6 h-6 button-pause" %}
+                </div>
+              </td>
+              <td class="pr-4">
+                <div class="playlist-button amplitude-song-container amplitude-play-pause" data-amplitude-song-index="{{ count }}">{% set count = count + 1 %}
+                  {% svg "play", "w-5 h-5 ml-[2px] button-play" %}
+                  {% svg "audio", "hidden w-6 h-6 button-pause" %}
+                </div>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
 
-  </div>
-</body>
+    </div>
+  </body>
 
   <script type="text/javascript">
     Amplitude.init({

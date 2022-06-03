@@ -2,16 +2,14 @@ const faviconsPlugin = require('eleventy-plugin-gen-favicons');
 const metagen = require('eleventy-plugin-metagen');
 const svgSprite = require('eleventy-plugin-svg-sprite');
 
-const htmlmin = require('html-minifier');
-
 const CleanCSS = require('clean-css');
 const postCss = require('postcss');
 const tailwind = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
-module.exports = function(eleventyConfig) {
+const htmlmin = require('html-minifier');
 
-  eleventyConfig.addNunjucksAsyncFilter("postcss");
+module.exports = function(eleventyConfig) {
 
   // passthrough files
   eleventyConfig.addPassthroughCopy({'./node_modules/amplitudejs/dist/amplitude.min.js': './amplitude.min.js'});
