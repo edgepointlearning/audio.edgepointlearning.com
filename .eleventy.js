@@ -12,6 +12,7 @@ const htmlmin = require('html-minifier');
 module.exports = function(eleventyConfig) {
 
   // passthrough files
+  eleventyConfig.setServerPassthroughCopyBehavior("copy"); //https://www.11ty.dev/docs/copy/#passthrough-during-serve
   eleventyConfig.addPassthroughCopy({'./node_modules/amplitudejs/dist/amplitude.min.js': './amplitude.min.js'});
   eleventyConfig.addPassthroughCopy({'./node_modules/amplitudejs/dist/amplitude.js.map': './amplitude.js.map'});
   eleventyConfig.addPassthroughCopy({'./src/static': './'});
