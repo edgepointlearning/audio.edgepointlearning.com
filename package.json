@@ -10,7 +10,7 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     
-    "@11ty/eleventy": "2.0.0-canary.12",
+    "@11ty/eleventy": "^1.0.1",
     "eleventy-plugin-metagen": "^1.5.2",
     "eleventy-plugin-svg-sprite": "^1.2.2",
     "eleventy-plugin-gen-favicons": "^1.1.0",
