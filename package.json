@@ -1,15 +1,9 @@
 {
   "scripts": {
-    "clean": "rimraf dist",
-    "dev:eleventy": "npx eleventy --serve",
-    "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
-    "dev": "run-p dev:*",
-    "build": "NODE_ENV=production run-s clean build:eleventy"
+    "dev": "npx eleventy --serve",
+    "build": "NODE_ENV=production ELEVENTY_PRODUCTION=true eleventy"
   },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    
+  "devDependencies": {   
     "@11ty/eleventy": "^1.0.1",
     "eleventy-plugin-metagen": "^1.5.2",
     "eleventy-plugin-svg-sprite": "^1.2.2",
