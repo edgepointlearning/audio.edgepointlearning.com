@@ -63,5 +63,10 @@
      "name": "Tim [UK]",
      "casual": "audio/tim-casual.mp3",
      "professional": "audio/tim-professional.mp3"
-  }
+  },
+  {
+   "name": "Tom",
+   "casual": "audio/tom-j-casual.mp3",
+   "professional": "audio/tom-j-professional.mp3"
+}
 ]
