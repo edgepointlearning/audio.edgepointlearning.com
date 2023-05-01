@@ -1,13 +1,13 @@
 [
   {
-     "name": "Abbey",
-     "casual": "audio/abbey-casual.mp3",
-     "professional": "audio/abbey-professional.mp3"
+    "name": "Abbey",
+    "casual": "audio/abbey-casual.mp3",
+    "professional": "audio/abbey-professional.mp3"
   },
   {
-     "name": "Arielle",
-     "casual": "audio/arielle-casual.mp3",
-     "professional": "audio/arielle-professional.mp3"
+    "name": "Arielle",
+    "casual": "audio/arielle-casual.mp3",
+    "professional": "audio/arielle-professional.mp3"
   },
   {
     "name": "Ashlinn",
@@ -15,58 +15,68 @@
     "professional": "audio/ashlinn-professional.mp3"
   },
   {
-     "name": "Dana",
-     "casual": "audio/dana-casual.mp3",
-     "professional": "audio/dana-professional.mp3"
+    "name": "Dana",
+    "casual": "audio/dana-casual.mp3",
+    "professional": "audio/dana-professional.mp3"
   },
   {
-     "name": "Melodie",
-     "casual": "audio/melodie-casual.mp3",
-     "professional": "audio/melodie-professional.mp3"
+    "name": "Melodie",
+    "casual": "audio/melodie-casual.mp3",
+    "professional": "audio/melodie-professional.mp3"
   },
   {
-     "name": "Rebecca",
-     "casual": "audio/rebecca-casual.mp3",
-     "professional": "audio/rebecca-professional.mp3"
+    "name": "Rebecca",
+    "casual": "audio/rebecca-casual.mp3",
+    "professional": "audio/rebecca-professional.mp3"
   },
   {
-     "name": "Sandra",
-     "casual": "audio/sandra-casual.mp3",
-     "professional": "audio/sandra-professional.mp3"
+    "name": "Sandra",
+    "casual": "audio/sandra-casual.mp3",
+    "professional": "audio/sandra-professional.mp3"
   },
   {
-     "name": "Adam",
-     "casual": "audio/adam-casual.mp3",
-     "professional": "audio/adam-professional.mp3"
+    "name": "Adam",
+    "casual": "audio/adam-casual.mp3",
+    "professional": "audio/adam-professional.mp3"
   },
   {
-     "name": "Eric",
-     "casual": "audio/eric-h-casual.mp3",
-     "professional": "audio/eric-h-professional.mp3"
+    "name": "Eric",
+    "casual": "audio/eric-h-casual.mp3",
+    "professional": "audio/eric-h-professional.mp3"
   },
   {
-     "name": "Jim",
-     "casual": "audio/jim-casual.mp3",
-     "professional": "audio/jim-professional.mp3"
+    "name": "Ferlon",
+    "casual": "audio/ferlon-casual.mp3",
+    "professional": "audio/ferlon-professional.mp3"
+  },  
+  {
+    "name": "Jim",
+    "casual": "audio/jim-casual.mp3",
+    "professional": "audio/jim-professional.mp3"
   },
   {
-     "name": "Kyle",
-     "casual": "audio/kyle-casual.mp3",
-     "professional": "audio/kyle-professional.mp3"
+    "name": "Juan",
+    "casual": "audio/juan-casual.mp3",
+    "professional": "audio/juan-professional.mp3"
   },
   {
-     "name": "Lex [CAN]",
-     "casual": "audio/lex-casual.mp3",
-     "professional": "audio/lex-professional.mp3"
+    "name": "Kyle",
+    "casual": "audio/kyle-casual.mp3",
+    "professional": "audio/kyle-professional.mp3"
   },
   {
-     "name": "Tim [UK]",
-     "casual": "audio/tim-casual.mp3",
-     "professional": "audio/tim-professional.mp3"
+    "name": "Lex [CAN]",
+    "casual": "audio/lex-casual.mp3",
+    "professional": "audio/lex-professional.mp3"
   },
   {
-   "name": "Tom",
-   "casual": "audio/tom-j-casual.mp3",
-   "professional": "audio/tom-j-professional.mp3"
-}
+    "name": "Tim [UK]",
+    "casual": "audio/tim-casual.mp3",
+    "professional": "audio/tim-professional.mp3"
+  },
+  {
+    "name": "Tom",
+    "casual": "audio/tom-j-casual.mp3",
+    "professional": "audio/tom-j-professional.mp3"
+  }
 ]
