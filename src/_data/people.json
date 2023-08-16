@@ -50,11 +50,6 @@
     "professional": "audio/ferlon-professional.mp3"
   },  
   {
-    "name": "Jim",
-    "casual": "audio/jim-casual.mp3",
-    "professional": "audio/jim-professional.mp3"
-  },
-  {
     "name": "Juan",
     "casual": "audio/juan-casual.mp3",
     "professional": "audio/juan-professional.mp3"
