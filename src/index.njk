@@ -1,5 +1,5 @@
 ---
-og-data: 
+opengraph: 
     title: EdgePoint Learning Audio Samples
     desc: Choose the perfect narrator for your project.
     url: https://audio.edgepointlearning.com
@@ -11,21 +11,19 @@ og-data:
   <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#FFFFFF">
 
-    <script type="text/javascript" src="amplitude.min.js"></script>
-    <title>EdgePoint Learning Audio Samples</title>
-    {% favicons './src/_includes/favicon.svg' %}
-    {% metagen og-data %}
+    <meta property="og:title" content="{{ opengraph.title }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ opengraph.url }}" />
+    <meta property="og:image" content="{{ opengraph.img }}" />
+    <meta property="og:image:alt" content="{{ opengraph.img_alt }}" />
+    <meta property="og:description" content="{{ opengraph.desc }}">
 
-    <style>
-      {% set css %}
-        {% include "styles.css" %}
-      {% endset %}
-      {{css | postcss | safe}}
-    </style>
+    <script type="text/javascript" src="amplitude.min.js"></script>
+    <link href="/styles.css" rel="stylesheet"/>
+    <title>{{ opengraph.title }}</title>
   </head>
 
   <body class="bg-slate-200">
