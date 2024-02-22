@@ -40,6 +40,11 @@
     "professional": "audio/adam-professional.mp3"
   },
   {
+    "name": "Eric",
+    "casual": "audio/eric-h-casual.mp3",
+    "professional": "audio/eric-h-professional.mp3"
+  },
+  {
     "name": "Ferlon",
     "casual": "audio/ferlon-casual.mp3",
     "professional": "audio/ferlon-professional.mp3"
