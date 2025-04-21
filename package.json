@@ -5,17 +5,16 @@
     "build": "cross-env NODE_ENV=production  npm run clean && eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "2.0.1",
-    "eleventy-plugin-svg-sprite": "2.4.2",
+    "@11ty/eleventy": "3.0.0",
+    "eleventy-plugin-svg-sprite": "2.4.3",
     "amplitudejs": "5.3.2",
     "tailwindcss": "3.4.7"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
     "htmlnano": "2.1.1",
-    "netlify-plugin-cache": "1.0.3",
-    "postcss": "8.4.41",
-    "postcss-lightningcss": "1.0.0",
+    "postcss": "8.5.3",
+    "postcss-lightningcss": "1.0.1",
     "rimraf": "6.0.1"
   }
 }
